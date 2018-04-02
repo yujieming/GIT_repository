@@ -42,6 +42,7 @@ def main():
     for data in get_url_list(url):
         url = 'https://www.x23us.com/html/64/64405/'+data[0]
         name = data[1]
+		#启动多线程
         q = threading.Thread(target = downlode,args = (url,name))
         q.start()
         q.join()
